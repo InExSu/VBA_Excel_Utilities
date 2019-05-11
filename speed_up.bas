@@ -6,10 +6,12 @@ Sub speed_up()
     ' if any of these features are needed within the code it is better to temporarily turn on the needed feature and turn it off again once it is no longer needed.
 
     '   Turning features off
-    Application.Calculation = xlCalculationManual
-    Application.ScreenUpdating = False
-    Application.DisplayStatusBar = False
-    Application.EnableEvents = False
+    With Application
+        .Calculation = xlCalculationManual
+        .ScreenUpdating = False
+        .DisplayStatusBar = False
+        .EnableEvents = False
+    End With
 
     '   your code here
     '   your code here
@@ -17,10 +19,12 @@ Sub speed_up()
     '   your code here
 
     '   Turning features back on
-    Application.Calculation = xlSemiautomatic
-    Application.ScreenUpdating = True
-    Application.DisplayStatusBar = True
-    Application.EnableEvents = True
+    With Application
+        .Calculation = xlSemiautomatic
+        .ScreenUpdating = True
+        .DisplayStatusBar = True
+        .EnableEvents = True
+    End With
 
 End Sub
 
